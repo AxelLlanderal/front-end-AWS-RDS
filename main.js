@@ -42,7 +42,7 @@ searchCountryBtn.addEventListener('click', () => {
 countryBtn.addEventListener('click', () => {
  
     clearRecords();
-    axios.get('../getRecords.php?table=country')
+    axios.get('http://98.81.180.239/php-intro-connection//getRecords.php?table=country')
         .then(response => {
             console.log(response.data);  // Verifica la estructura de los datos en la consola
             const data = Array.isArray(response.data) ? response.data : response.data.country || [];
@@ -57,7 +57,7 @@ countryBtn.addEventListener('click', () => {
 cityBtn.addEventListener('click', () => {
 
     clearRecords();
-    axios.get('../getRecords.php?table=city')
+    axios.get('http://98.81.180.239/php-intro-connection//getRecords.php?table=city')
         .then(response => {
             console.log(response.data);  // Verifica la estructura de los datos en la consola
             const data = Array.isArray(response.data) ? response.data : response.data.city || [];
@@ -72,7 +72,7 @@ cityBtn.addEventListener('click', () => {
 countryLanguageBtn.addEventListener('click', () => {
 
     clearRecords();
-    axios.get('../getRecords.php?table=countrylanguage')
+    axios.get('http://98.81.180.239/php-intro-connection//getRecords.php?table=countrylanguage')
         .then(response => {
             console.log(response.data);  // Verifica la estructura de los datos en la consola
             const data = Array.isArray(response.data) ? response.data : response.data.countrylanguage || [];
