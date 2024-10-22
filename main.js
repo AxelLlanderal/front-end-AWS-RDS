@@ -23,7 +23,7 @@ searchCountryBtn.addEventListener('click', () => {
     }
 
     clearRecords();
-    axios.get(`../getRecords.php?search=${countryName}`)
+    axios.get(`http://98.81.180.239/php-intro-connection/getRecords.php?search=${countryName}`)
         .then(response => {
             const data = response.data;
             console.log(data);
